@@ -130,9 +130,6 @@ else
 	endif
 	RTKDIR := $(subst $(BASEDIR)/,,$(DRIVERDIR))
 
-	KERNEL_GCC_VERSION := $(shell cat /proc/version | sed -n 's/.*gcc version \([[:digit:]]\.[[:digit:]]\.[[:digit:]]\).*/\1/p')
-	CCVERSION = $(shell $(CC) -dumpversion)
-
 .PHONY: all
 all: print_vars clean modules install
 
